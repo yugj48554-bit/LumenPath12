@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lumen Path | AI Career Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #051a0d; color: white; }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { background: rgba(8, 32, 18, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(16, 185, 129, 0.2); }
+    </style>
+</head>
+<body class="p-6 md:p-12">
+    <div class="max-w-5xl mx-auto">
+        <header class="flex justify-between items-center mb-16">
+            <div class="text-2xl font-bold tracking-tighter">LUMEN<span class="text-emerald-500">PATH</span></div>
+            <div class="text-xs mono text-emerald-500 bg-emerald-950 px-3 py-1 rounded-full border border-emerald-800">SYSTEM STATUS: OPTIMAL</div>
+        </header>
+
+        <section class="text-center mb-16">
+            <h1 class="text-5xl md:text-6xl font-black mb-6">Map Your Career <br><span class="text-emerald-500">Vector.</span></h1>
+            <p class="text-emerald-100/60 text-lg max-w-2xl mx-auto mb-8">Bridging the gap between your current skills and the future of industry using our Synthesis Engine.</p>
+            
+            <div class="glass p-8 rounded-3xl max-w-3xl mx-auto shadow-2xl">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input id="skillInput" type="text" placeholder="Enter a skill (e.g. Python, UX Design, AWS)" 
+                           class="flex-1 bg-black/50 border border-emerald-900 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 mono">
+                    <button onclick="runAnalysis()" class="bg-emerald-500 hover:bg-emerald-400 text-black font-bold px-8 py-4 rounded-xl transition-all">ANALYZE PATH</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="resultsArea" class="hidden grid md:grid-cols-2 gap-6 mb-12 animate-in fade-in duration-700">
+            <div class="glass p-6 rounded-2xl">
+                <h3 class="mono text-emerald-500 text-sm mb-4">KNOWLEDGE GRAPH MAPPING</h3>
+                <div id="graphOutput" class="text-lg font-bold"></div>
+                <div id="demandTag" class="mt-4 inline-block px-2 py-1 bg-emerald-900 text-emerald-300 text-xs rounded"></div>
+            </div>
+            <div class="glass p-6 rounded-2xl border-l-4 border-l-emerald-500">
+                <h3 class="mono text-emerald-500 text-sm mb-4">SYNTHESIS ROADMAP</h3>
+                <p id="roadmapOutput" class="text-emerald-100/80 leading-relaxed"></p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 opacity-50 text-sm mono">
+            <div>[01] INGESTION ENGINE</div>
+            <div>[02] MAPPING VECTOR</div>
+            <div>[03] RAG SYNTHESIS</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
